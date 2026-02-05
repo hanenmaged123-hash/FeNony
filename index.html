@@ -2,64 +2,70 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>FeNony</title>
+  <title>فِنوني | Feنony</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #000;
+      background-color: #111;
+      color: #fff;
     }
+
     header {
-      background: #000;
-      color: #fff;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
     }
+
+    header h1 {
+      color: #e91e63;
+      margin: 0;
+    }
+
     nav a {
-      color: #ff69b4;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      padding: 50px;
-      text-align: center;
-    }
-    .hero h1 {
-      color: #ff69b4;
-    }
-    footer {
-      background: #000;
       color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #e91e63;
+    }
+
+    .hero {
       text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      color: #e91e63;
+      font-size: 32px;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h2>FeNony</h2>
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">أخبار الفن</a>
-    <a href="#">المشاهير</a>
-    <a href="#">تواصل معنا</a>
-  </nav>
-</header>
+  <header>
+    <h1>Feنony</h1>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">أخبار الفن</a>
+      <a href="#">المشاهير</a>
+      <a href="#">تواصل معنا</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>أهلاً بيك في FeNony</h1>
-  <p>موقع فني متخصص في أخبار الفن والمشاهير</p>
-</section>
-
-<footer>
-  © 2026 FeNony
-</footer>
+  <section class="hero">
+    <h2>أهلاً بيك في فِنوني</h2>
+    <p>موقع متخصص في أخبار الفن والمشاهير</p>
+  </section>
 
 </body>
 </html>
