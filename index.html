@@ -75,10 +75,26 @@
       font-size: 28px;
     }
 
-    .about p {
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .about-content img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(255,77,166,.4);
+    }
+
+    .about-content p {
       color: #ccc;
-      max-width: 750px;
-      margin: auto;
+      max-width: 550px;
       line-height: 1.9;
     }
 
@@ -182,6 +198,10 @@
         flex-direction: column;
         text-align: center;
       }
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -211,17 +231,22 @@
 
 <section class="about">
   <h3>عن <span class="brand-name">Feنony</span></h3>
-  <p>
-    <span class="brand-name">Feنony</span>
-    موقع متخصص في أخبار الفن والدراما والسينما،
-    بنقدّم محتوى خفيف، سريع، وقريب من الجمهور.
-  </p>
+  <div class="about-content">
+    <!-- حطي الصوره -->
+    <img src="حطي الصوره" alt="حنين ماجد">
+    <p>
+      <span class="brand-name">Feنony</span>
+      موقع متخصص في أخبار الفن والدراما والسينما،
+      بنقدّم محتوى خفيف، سريع، وقريب من الجمهور.
+    </p>
+  </div>
 </section>
 
 <!-- ===== Pinned Article ===== -->
 <section class="profile-page">
   <div class="profile-box">
 
+    <!-- me.jpg -->
     <img src="me.jpg" alt="حنين ماجد">
 
     <div class="profile-content">
