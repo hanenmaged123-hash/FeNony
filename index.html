@@ -2,7 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Feنony</title>
+  <title>حنين ماجد – Founder Feنony</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
@@ -28,20 +31,8 @@
       background: #000;
     }
 
-    .logo-box {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
-
     .logo-box img {
-      height: 90px;
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
-
-    .logo-box:hover img {
-      transform: scale(1.08) rotate(-2deg);
-      filter: drop-shadow(0 0 12px rgba(255, 77, 166, 0.6));
+      height: 80px;
     }
 
     nav a {
@@ -55,103 +46,85 @@
       color: #ff4da6;
     }
 
-    /* ===== Hero ===== */
-    .hero {
-      text-align: center;
-      padding: 120px 20px 80px;
+    /* ===== Page ===== */
+    .profile-page {
+      padding: 80px 20px;
     }
 
-    .hero h2 {
-      color: #ff4da6;
-      font-size: 36px;
+    .pinned-badge {
+      display: inline-block;
+      background: #ff4da6;
+      color: #000;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
       margin-bottom: 15px;
     }
 
-    .hero p {
-      color: #ccc;
-      font-size: 18px;
-      max-width: 650px;
+    .profile-box {
+      max-width: 900px;
       margin: auto;
-      line-height: 1.8;
+      background: #1a1a1a;
+      border-radius: 18px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(255, 77, 166, 0.2);
     }
 
-    /* ===== About ===== */
-    .about {
-      background: #0b0b0b;
-      padding: 70px 20px;
-      text-align: center;
+    .profile-box img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255, 77, 166, 0.4);
     }
 
-    .about h3 {
+    .profile-content h2 {
       color: #ff4da6;
-      font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    .about p {
+    .profile-content h4 {
+      color: #aaa;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .profile-content p {
       color: #ccc;
-      max-width: 750px;
-      margin: auto;
       font-size: 17px;
       line-height: 1.9;
     }
 
-    /* ===== Cards ===== */
-    .cards {
-      padding: 80px 40px;
+    /* ===== Social Icons ===== */
+    .social-icons {
+      margin-top: 25px;
     }
 
-    .cards h3 {
-      text-align: center;
+    .social-icons a {
+      color: #fff;
+      font-size: 22px;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
       color: #ff4da6;
-      font-size: 28px;
-      margin-bottom: 50px;
-    }
-
-    .cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      padding: 25px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px rgba(255, 77, 166, 0.25);
-    }
-
-    .card h4 {
-      color: #ff4da6;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 15px;
-      line-height: 1.7;
+      transform: scale(1.2);
     }
 
     /* ===== Mobile ===== */
     @media (max-width: 768px) {
-      header {
+      .profile-box {
         flex-direction: column;
-        gap: 15px;
+        text-align: center;
       }
 
-      .logo-box img {
-        height: 70px;
-      }
-
-      nav a {
-        margin-right: 10px;
-        font-size: 14px;
+      .profile-box img {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -173,57 +146,48 @@
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <h2>عالم الفن بين إيديك</h2>
-    <p>
-      <span class="brand-name">Feنony</span>
-      منصة إعلامية تهتم بأخبار الفن والمشاهير،
-      كواليس حصرية وتغطية سريعة من قلب الحدث.
-    </p>
-  </section>
+  <!-- ===== Profile Page (Pinned Article) ===== -->
+  <section class="profile-page">
+    <div class="profile-box">
 
-  <!-- ===== About ===== -->
-  <section class="about">
-    <h3>
-      عن <span class="brand-name">Feنony</span>
-    </h3>
-    <p>
-      <span class="brand-name">Feنony</span>
-      موقع متخصص في أخبار الفن والدراما والسينما،
-      بنقدّم محتوى خفيف، سريع، وقريب من الجمهور.
-      هدفنا نكون دايمًا معاك في قلب الحدث،
-      ونوصل لك المعلومة بشكل بسيط وموثوق.
-    </p>
-  </section>
+      <img src="me.jpg" alt="حنين ماجد">
 
-  <!-- ===== Cards ===== -->
-  <section class="cards">
-    <h3>آخر الأخبار</h3>
+      <div class="profile-content">
+        <span class="pinned-badge">📌 مقال مثبت</span>
 
-    <div class="cards-container">
-      <div class="card">
-        <h4>خبر فني حصري</h4>
+        <h2>حنين ماجد</h2>
+        <h4>Founder <span class="brand-name">Feنony</span></h4>
+
         <p>
-          تفاصيل جديدة عن عمل فني منتظر
-          وخطوات الإنتاج اللي بتحصل حاليًا.
+          صحفية ومراسلة بخبرة تمتد لأكثر من 6 سنوات في مجال الإعلام والصحافة،
+          خريجة كلية الإعلام – قسم الصحافة.
         </p>
-      </div>
 
-      <div class="card">
-        <h4>تصريحات المشاهير</h4>
         <p>
-          تصريحات جريئة من نجوم الفن
-          عن أعمالهم القادمة وكواليسها.
+          اتسحرت بعالم الفن والنجوم،
+          وقررت تكون جزء حقيقي منه،
+          وتنقلكم كل كواليسه وأخباره خطوة بخطوة،
+          بكل شغف، حب، ومصداقية.
         </p>
-      </div>
 
-      <div class="card">
-        <h4>ترندات السوشيال</h4>
-        <p>
-          أبرز التريندات الفنية المنتشرة
-          على مواقع التواصل الاجتماعي.
-        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/14U8Y88Z3UG/?mibextid=wwXIfr" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/hanenmaged?igsh=MWR6c2Y3OHJodXB4OQ%3D%3D&utm_source=qr" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://youtube.com/@hanenmaged9738?si=2FZiZH8JSij22G1T" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@hanenmaged05?_r=1&_t=ZS-93hs0a8eOSi" target="_blank">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
