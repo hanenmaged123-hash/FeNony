@@ -2,54 +2,59 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Feنony</title>
+  <title>FeNony</title>
 
   <style>
-    .logo-box {
-  background: #000;
-  border: 3px solid #000;
-  padding: 10px 18px;
-  display: flex;
-  align-items: center;
-}
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+    }
 
-.logo-box img {
-  height: 150px;     
-  width: auto;
-  display: block; 
-  /* ===== Header ===== */
-    .header {
+    /* ===== Header ===== */
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
+      padding: 15px 40px;
       background: #000;
     }
 
-    .logo img {
-      height: 80px;
+    .logo-box {
+      background: #000;
+      border: 3px solid #000;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
     }
 
-    .nav a {
+    .logo-box img {
+      height: 130px;   /* حجم اللوجو الحقيقي */
+      width: auto;
+      display: block;
+    }
+
+    nav a {
       color: white;
       margin-right: 20px;
       text-decoration: none;
       font-size: 16px;
     }
 
-    .nav a:hover {
+    nav a:hover {
       color: #ff4da6;
     }
 
     /* ===== Hero Section ===== */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
     }
 
     .hero h2 {
       color: #ff4da6;
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
@@ -57,18 +62,35 @@
       color: #ccc;
       font-size: 18px;
     }
+
+    /* ===== Mobile Fix ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .logo-box img {
+        height: 100px;
+      }
+
+      nav a {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ===== Header ===== -->
-  <header class="header">
+  <header>
     <div class="logo-box">
-      <img src="logo.png" alt="Feنony Logo">
+      <img src="logo.png" alt="FeNony Logo">
     </div>
 
-    <nav class="nav">
+    <nav>
       <a href="#">الرئيسية</a>
       <a href="#">أخبار الفن</a>
       <a href="#">المشاهير</a>
