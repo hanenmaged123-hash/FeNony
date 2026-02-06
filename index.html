@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>Feنony</title>
@@ -9,7 +9,6 @@
       margin: 0;
       background: #111;
       font-family: Arial, sans-serif;
-      direction: rtl;
       color: #fff;
     }
 
@@ -18,218 +17,121 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 30px;
+      padding: 15px 40px;
       background: #000;
-      border-bottom: 2px solid #222;
     }
 
-    .logo img {
-      height: 65px; /* نكبره بعدين لو حابة */
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box img {
+      height: 90px;
+      width: auto;
+      display: block;
+    }
+
+    .logo-text {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff4da6;
+      animation: glow 2.5s infinite ease-in-out;
+    }
+
+    /* ===== Glow Animation ===== */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #ff4da6;
+      }
+      50% {
+        text-shadow: 0 0 20px #ff4da6, 0 0 40px #ff80c1;
+      }
+      100% {
+        text-shadow: 0 0 5px #ff4da6;
+      }
     }
 
     nav a {
       color: #fff;
       margin-right: 20px;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     nav a:hover {
       color: #ff4da6;
     }
 
-    /* ===== Hero ===== */
+    /* ===== Hero Section ===== */
     .hero {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 120px 20px;
     }
 
-    .hero h1 {
+    .hero h2 {
       color: #ff4da6;
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .hero p {
       color: #ccc;
       font-size: 18px;
-    }
-
-    /* ===== About ===== */
-    .about {
-      max-width: 900px;
+      max-width: 600px;
       margin: auto;
-      padding: 40px 20px;
-      text-align: center;
+      line-height: 1.8;
     }
 
-    .about h2 {
-      color: #ff4da6;
-      margin-bottom: 15px;
-      font-size: 28px;
-    }
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
 
-    .about p {
-      color: #ddd;
-      line-height: 1.9;
-      font-size: 17px;
-    }
+      .logo-box img {
+        height: 70px;
+      }
 
-    /* ===== News Cards ===== */
-    .news-section {
-      padding: 40px 20px 80px;
-      max-width: 1200px;
-      margin: auto;
-    }
+      .logo-text {
+        font-size: 22px;
+      }
 
-    .news-title {
-      text-align: center;
-      color: #ff4da6;
-      font-size: 30px;
-      margin-bottom: 40px;
+      nav a {
+        margin-right: 10px;
+        font-size: 14px;
+      }
     }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s;
-      border: 1px solid #222;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 18px;
-    }
-
-    .card-content h3 {
-      color: #ff4da6;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .card-content p {
-      color: #ccc;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .card-content a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-      border: 1px solid #ff4da6;
-      padding: 6px 14px;
-      border-radius: 20px;
-    }
-
-    .card-content a:hover {
-      background: #ff4da6;
-      color: #000;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      color: #777;
-      font-size: 14px;
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
+  <!-- ===== Header ===== -->
   <header>
-    <div class="logo">
+    <div class="logo-box">
       <img src="logo.png" alt="Feنony Logo">
+      <div class="logo-text">Feنony</div>
     </div>
 
     <nav>
       <a href="#">الرئيسية</a>
       <a href="#">أخبار الفن</a>
-      <a href="#">الدراما</a>
-      <a href="#">السينما</a>
+      <a href="#">المشاهير</a>
       <a href="#">تواصل معنا</a>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
-    <h1>عالم الفن بين إيديك</h1>
-    <p>أخبار، كواليس، وتحليلات من قلب الوسط الفني</p>
-  </section>
-
-  <!-- About -->
-  <section class="about">
-    <h2>عن Feنony</h2>
+    <h2>عالم الفن بين إيديك</h2>
     <p>
-      Feنony موقع مخصص لأخبار الفن والدراما والسينما والفنانين،
-      هنعيش معاه كل ما يخص الفن وكواليسه لحظة بلحظة.
-      هدفنا نقدّم محتوى خفيف، سريع، وقريب من الجمهور،
-      ونكون دايمًا معاك في قلب الحدث.
+      Feنony موقع متخصص في أخبار الفن والمشاهير، كواليس حصرية
+      وتغطية سريعة من قلب الحدث.
     </p>
   </section>
-
-  <!-- News -->
-  <section class="news-section">
-    <h2 class="news-title">آخر الأخبار</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="">
-        <div class="card-content">
-          <h3>كواليس عمل فني جديد</h3>
-          <p>تفاصيل حصرية من كواليس عمل فني منتظر يشعل السوشيال ميديا.</p>
-          <a href="#">اقرأ المزيد</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="">
-        <div class="card-content">
-          <h3>نجم يتصدر التريند</h3>
-          <p>تصريحات مفاجئة من نجم شهير تثير الجدل بين الجمهور.</p>
-          <a href="#">اقرأ المزيد</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="">
-        <div class="card-content">
-          <h3>فيلم جديد قريبًا</h3>
-          <p>الإعلان عن فيلم سينمائي جديد يضم مجموعة من النجوم.</p>
-          <a href="#">اقرأ المزيد</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2026 Feنony – جميع الحقوق محفوظة
-  </footer>
 
 </body>
 </html>
