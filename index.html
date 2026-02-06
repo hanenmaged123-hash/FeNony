@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>فِنوني | Feنony</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #000;
-    }
-
-    header h1 {
-      color: #e91e63;
-      margin: 0;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 15px;
-      text-decoration: none;
-    }
+  }
 
     nav a:hover {
       color: #e91e63;
@@ -49,6 +19,36 @@
       font-size: 18px;
     }
   </style>
+body {
+  margin: 0;
+  background: #111;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #ff4da6;
+}
+</style>
 </head>
 <body>
 
@@ -69,3 +69,15 @@
 
 </body>
 </html>
+<header class="header">
+  <div class="logo">
+    <img src="logo.png" alt="Feنony Logo">
+  </div>
+
+  <nav class="nav">
+    <a href="#">الرئيسية</a>
+    <a href="#">أخبار الفن</a>
+    <a href="#">المشاهير</a>
+    <a href="#">تواصل معنا</a>
+  </nav>
+</header>
