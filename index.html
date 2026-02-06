@@ -12,6 +12,13 @@
       color: #fff;
     }
 
+    /* ===== Brand Name Fix ===== */
+    .brand-name {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      display: inline-block;
+    }
+
     /* ===== Header ===== */
     header {
       display: flex;
@@ -170,16 +177,20 @@
   <section class="hero">
     <h2>عالم الفن بين إيديك</h2>
     <p>
-      Feنony منصة إعلامية تهتم بأخبار الفن والمشاهير،
+      <span class="brand-name">Feنony</span>
+      منصة إعلامية تهتم بأخبار الفن والمشاهير،
       كواليس حصرية وتغطية سريعة من قلب الحدث.
     </p>
   </section>
 
   <!-- ===== About ===== -->
   <section class="about">
-    <h3>عن Feنony</h3>
+    <h3>
+      عن <span class="brand-name">Feنony</span>
+    </h3>
     <p>
-      Feنony موقع متخصص في أخبار الفن والدراما والسينما،
+      <span class="brand-name">Feنony</span>
+      موقع متخصص في أخبار الفن والدراما والسينما،
       بنقدّم محتوى خفيف، سريع، وقريب من الجمهور.
       هدفنا نكون دايمًا معاك في قلب الحدث،
       ونوصل لك المعلومة بشكل بسيط وموثوق.
