@@ -5,6 +5,10 @@
   <title>Feنony</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #111;
@@ -12,47 +16,50 @@
       direction: rtl;
     }
 
-    /* ===== Header ===== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 30px;
+    /* ===== HEADER ===== */
+    .header {
+      height: 90px;
       background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
     }
 
-    .logo-box {
+    .logo {
       background: #000;
       border: 3px solid #000;
-      padding: 4px 12px;
+      padding: 6px 16px;
       display: flex;
       align-items: center;
     }
 
-    .logo-box img {
-      height: 75px-70;   /* حجم اللوجو الحقيقي */
+    .logo img {
+      height: 70px;    
       width: auto;
       display: block;
     }
 
-    nav a {
+    .nav a {
       color: white;
-      margin-right: 20px;
       text-decoration: none;
+      margin-right: 20px;
       font-size: 16px;
+      transition: 0.3s;
     }
 
-    nav a:hover {
+    .nav a:hover {
       color: #ff4da6;
     }
 
-    /* ===== Hero Section ===== */
+    /* ===== HERO ===== */
     .hero {
       text-align: center;
       padding: 120px 20px;
+      background: #111;
     }
 
-    .hero h2 {
+    .hero h1 {
       color: #ff4da6;
       font-size: 36px;
       margin-bottom: 10px;
@@ -62,35 +69,18 @@
       color: #ccc;
       font-size: 18px;
     }
-
-    /* ===== Mobile Fix ===== */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .logo-box img {
-        height: 100px;
-      }
-
-      nav a {
-        margin-right: 10px;
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <div class="logo-box">
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">
       <img src="logo.png" alt="FeNony Logo">
     </div>
 
-    <nav>
+    <nav class="nav">
       <a href="#">الرئيسية</a>
       <a href="#">أخبار الفن</a>
       <a href="#">المشاهير</a>
@@ -98,9 +88,9 @@
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <h2>أهلاً بيك في فنوني</h2>
+    <h1>أهلاً بيك في فنوني</h1>
     <p>موقع متخصص في أخبار الفن والمشاهير</p>
   </section>
 
