@@ -1,17 +1,51 @@
-  }
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Feنony</title>
 
-    nav a:hover {
-      color: #e91e63;
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+      direction: rtl;
     }
 
+    /* ===== Header ===== */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #000;
+    }
+
+    .logo img {
+      height: 55px;
+    }
+
+    .nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav a:hover {
+      color: #ff4da6;
+    }
+
+    /* ===== Hero Section ===== */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
     .hero h2 {
-      color: #e91e63;
-      font-size: 32px;
+      color: #ff4da6;
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
     .hero p {
@@ -19,42 +53,17 @@
       font-size: 18px;
     }
   </style>
-body {
-  margin: 0;
-  background: #111;
-  font-family: Arial, sans-serif;
-  direction: rtl;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #000;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.nav a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.nav a:hover {
-  color: #ff4da6;
-}
-</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Feنony</h1>
-    <nav>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Feنony Logo">
+    </div>
+
+    <nav class="nav">
       <a href="#">الرئيسية</a>
       <a href="#">أخبار الفن</a>
       <a href="#">المشاهير</a>
@@ -62,22 +71,11 @@ body {
     </nav>
   </header>
 
+  <!-- ===== Hero ===== -->
   <section class="hero">
-    <h2>أهلاً بيك في فِنوني</h2>
+    <h2>أهلاً بيك في فنوني</h2>
     <p>موقع متخصص في أخبار الفن والمشاهير</p>
   </section>
 
 </body>
 </html>
-<header class="header">
-  <div class="logo">
-    <img src="logo.png" alt="Feنony Logo">
-  </div>
-
-  <nav class="nav">
-    <a href="#">الرئيسية</a>
-    <a href="#">أخبار الفن</a>
-    <a href="#">المشاهير</a>
-    <a href="#">تواصل معنا</a>
-  </nav>
-</header>
