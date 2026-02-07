@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Feنony – حنين ماجد</title>
 
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -25,7 +24,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
+      padding: 12px 40px;
       background: #000;
     }
 
@@ -41,12 +40,18 @@
 
     .hero {
       text-align: center;
-      padding: 120px 20px 80px;
+      padding: 100px 20px 70px;
     }
 
     .hero h2 { color: #ff4da6; font-size: 36px; }
-    .hero p { color: #ccc; max-width: 650px; margin: auto; line-height: 1.8; }
+    .hero p {
+      color: #ccc;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+    }
 
+    /* ===== مقال الموقع (من غير صور) ===== */
     .about {
       background: #0b0b0b;
       padding: 70px 20px;
@@ -54,23 +59,17 @@
     }
 
     .about h3 { color: #ff4da6; font-size: 28px; }
-    .about-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      text-align: center;
-    }
 
-    .about-content p {
+    .about p {
       color: #ccc;
-      max-width: 550px;
+      max-width: 700px;
+      margin: 30px auto 0;
       line-height: 1.9;
     }
 
+    /* ===== المقال المثبت (بصورتك) ===== */
     .profile-page { padding: 80px 20px; }
+
     .profile-box {
       max-width: 900px;
       margin: auto;
@@ -78,56 +77,36 @@
       border-radius: 18px;
       padding: 40px;
       display: flex;
-      gap: 30px;
+      gap: 40px;
       align-items: center;
       box-shadow: 0 0 30px rgba(255,77,166,.2);
-      flex-direction: column;
-      text-align: center;
+      flex-wrap: wrap;
     }
 
     .profile-box img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 0 20px rgba(255,77,166,.4);
     }
 
     .profile-content h2 { color: #ff4da6; margin: 10px 0; }
-    .profile-content h4 { color: #aaa; font-weight: normal; margin-bottom: 15px; }
+    .profile-content h4 { color: #aaa; font-weight: normal; }
     .profile-content p { color: #ccc; line-height: 1.9; }
 
     .social-icons a {
       color: #fff;
       margin-left: 15px;
       font-size: 22px;
-      transition: 0.3s;
+      transition: .3s;
     }
-    .social-icons a:hover { color: #ff4da6; transform: scale(1.2); }
 
-    .cards {
-      padding: 80px 40px;
-    }
-    .cards h3 {
-      text-align: center;
-      color: #ff4da6;
-      margin-bottom: 50px;
-    }
-    .cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 25px;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 12px;
-    }
-    .card h4 { color: #ff4da6; }
-    .card p { color: #ccc; line-height: 1.7; }
+    .social-icons a:hover { color: #ff4da6; }
 
+    /* ===== المقالات ===== */
     .articles {
-      padding: 50px 20px;
+      padding: 70px 20px;
       max-width: 950px;
       margin: auto;
     }
@@ -137,102 +116,25 @@
       padding: 30px;
       border-radius: 12px;
       margin-bottom: 40px;
-      box-shadow: 0 0 20px rgba(255,77,166,.2);
     }
 
-    .article h3 { color: #ff4da6; margin-bottom: 15px; }
+    .article h3 { color: #ff4da6; }
 
     .article-content {
       display: flex;
-      align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .article-content img {
       width: 180px;
       height: 180px;
-      object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255,77,166,.3);
+      object-fit: cover;
     }
 
-    .article-content p { color: #ccc; max-width: 600px; line-height: 1.8; }
+    .article-content p { color: #ccc; line-height: 1.8; }
 
-    @media (max-width:768px) {
-      .about-content, .article-content { flex-direction: column; text-align: center; }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo-box">
-    <img src="logo.png" alt="Feنony Logo">
-  </div>
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">أخبار الفن</a>
-    <a href="#">المشاهير</a>
-    <a href="#">تواصل معنا</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>عالم الفن بين إيديك</h2>
-  <p>
-    <span class="brand-name">Feنony</span>
-    منصة إعلامية تهتم بأخبار الفن والمشاهير،
-    كواليس حصرية وتغطية سريعة من قلب الحدث.
-  </p>
-</section>
-
-<!-- مقال الموقع (من غير صورة) -->
-<section class="about">
-  <h3>عن <span class="brand-name">Feنony</span></h3>
-  <div class="about-content">
-    <p>
-      <span class="brand-name">Feنony</span>
-      موقع متخصص في أخبار الفن والدراما والسينما،
-      بنقدّم محتوى خفيف، سريع، وقريب من الجمهور.
-    </p>
-  </div>
-</section>
-
-<!-- المقال المثبت الخاص بيكي (بالصورة) -->
-<section class="profile-page">
-  <div class="profile-box">
-
-    <!-- صورة حنين -->
-    <img src="me.jpg" alt="حنين ماجد">
-
-    <div class="profile-content">
-      <span class="pinned">📌 مقال مثبت</span>
-      <h2>حنين ماجد</h2>
-      <h4>Founder <span class="brand-name">Feنony</span></h4>
-
-      <p>
-        صحفية ومراسلة بخبرة 6 سنوات في الإعلام والصحافة،
-        خريجة كلية الإعلام – قسم صحافة.
-      </p>
-
-      <p>
-        اتسحرت بعالم الفن والنجوم،
-        وقررت تكون جزء حقيقي منه،
-        وتنقلكم كل كواليسه وأخباره بكل شغف وحب.
-      </p>
-
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/14U8Y88Z3UG/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/hanenmaged" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@hanenmaged9738" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@hanenmaged05" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-</body>
-</html>
+    /* ===== الكروت ===== */
+    .cards
