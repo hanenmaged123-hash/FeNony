@@ -61,18 +61,14 @@
       gap: 20px;
       flex-wrap: wrap;
       margin-top: 30px;
-      text-align: right;
+      text-align: center;
     }
 
-    .about-content img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(255,77,166,.4);
+    .about-content p {
+      color: #ccc;
+      max-width: 550px;
+      line-height: 1.9;
     }
-
-    .about-content p { color: #ccc; max-width: 550px; line-height: 1.9; }
 
     .profile-page { padding: 80px 20px; }
     .profile-box {
@@ -82,10 +78,19 @@
       border-radius: 18px;
       padding: 40px;
       display: flex;
-      gap: 40px;
+      gap: 30px;
       align-items: center;
       box-shadow: 0 0 30px rgba(255,77,166,.2);
       flex-direction: column;
+      text-align: center;
+    }
+
+    .profile-box img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(255,77,166,.4);
     }
 
     .profile-content h2 { color: #ff4da6; margin: 10px 0; }
@@ -121,7 +126,6 @@
     .card h4 { color: #ff4da6; }
     .card p { color: #ccc; line-height: 1.7; }
 
-    /* ===== قالب الأخبار الجاهز للكتابة ===== */
     .articles {
       padding: 50px 20px;
       max-width: 950px;
@@ -184,11 +188,10 @@
   </p>
 </section>
 
+<!-- مقال الموقع (من غير صورة) -->
 <section class="about">
   <h3>عن <span class="brand-name">Feنony</span></h3>
   <div class="about-content">
-    <!-- me.jpg -->
-    <img src="me.jpg" alt="حنين ماجد">
     <p>
       <span class="brand-name">Feنony</span>
       موقع متخصص في أخبار الفن والدراما والسينما،
@@ -197,8 +200,13 @@
   </div>
 </section>
 
+<!-- المقال المثبت الخاص بيكي (بالصورة) -->
 <section class="profile-page">
   <div class="profile-box">
+
+    <!-- صورة حنين -->
+    <img src="me.jpg" alt="حنين ماجد">
+
     <div class="profile-content">
       <span class="pinned">📌 مقال مثبت</span>
       <h2>حنين ماجد</h2>
@@ -222,44 +230,7 @@
         <a href="https://www.tiktok.com/@hanenmaged05" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ===== قسم الأخبار الجاهز للكتابة اليومية ===== -->
-<section class="articles">
-
-  <!-- مثال على مقال جاهز -->
-  <section class="article">
-    <h3>عنوان الخبر هنا</h3>
-    <div class="article-content">
-      <img src="حطي الصوره1" alt="وصف الصورة">
-      <p>
-        هنا نص الخبر بالكامل، تقدري تحطي أي عدد أسطر تحبي.
-      </p>
-      <!-- لو عايزة صورة ثانية -->
-      <!-- <img src="حطي الصوره2" alt="وصف الصورة2"> -->
-    </div>
-  </section>
-
-  <!-- كل مرة عايزة مقال جديد: انسخي قالب المقال فوق، وعدلي العنوان، النص، والصور -->
-
-</section>
-
-<section class="cards">
-  <h3>آخر الأخبار</h3>
-  <div class="cards-container">
-    <div class="card">
-      <h4>خبر فني حصري</h4>
-      <p>تفاصيل جديدة عن عمل فني منتظر.</p>
-    </div>
-    <div class="card">
-      <h4>تصريحات المشاهير</h4>
-      <p>أبرز تصريحات النجوم وكواليسهم.</p>
-    </div>
-    <div class="card">
-      <h4>ترندات السوشيال</h4>
-      <p>أهم التريندات الفنية على السوشيال.</p>
-    </div>
   </div>
 </section>
 
