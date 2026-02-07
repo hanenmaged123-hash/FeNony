@@ -137,4 +137,120 @@
     .article-content p { color: #ccc; line-height: 1.8; }
 
     /* ===== الكروت ===== */
-    .cards
+    .cards {
+      padding: 80px 40px;
+    }
+
+    .cards h3 {
+      text-align: center;
+      color: #ff4da6;
+      margin-bottom: 50px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .card h4 { color: #ff4da6; }
+    .card p { color: #ccc; line-height: 1.7; }
+
+    @media (max-width:768px) {
+      .profile-box { justify-content: center; text-align: center; }
+      .article-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-box">
+    <img src="logo.png" alt="Feنony Logo">
+  </div>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">أخبار الفن</a>
+    <a href="#">المشاهير</a>
+    <a href="#">تواصل معنا</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>عالم الفن بين إيديك</h2>
+  <p>
+    <span class="brand-name">Feنony</span>
+    منصة متخصصة في أخبار الفن والدراما والسينما وكواليس النجوم لحظة بلحظة.
+  </p>
+</section>
+
+<section class="about">
+  <h3>عن <span class="brand-name">Feنony</span></h3>
+  <p>
+    Feنony موقع مخصص لأخبار الفن والدراما والسينما والفنانين،
+    بنقدّم محتوى سريع، خفيف، ومواكب لكل جديد في عالم الفن وكواليسه.
+  </p>
+</section>
+
+<section class="profile-page">
+  <div class="profile-box">
+    <img src="صورتك.jpg" alt="حنين ماجد">
+
+    <div class="profile-content">
+      <h2>حنين ماجد</h2>
+      <h4>Founder <span class="brand-name">Feنony</span></h4>
+
+      <p>
+        صحفية ومراسلة ومذيعة، بخبرة أكثر من 6 سنوات في مجال الإعلام،
+        مؤسسة موقع Feنony.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="articles">
+  <section class="article">
+    <h3>عنوان الخبر</h3>
+    <div class="article-content">
+      <img src="صورة-الخبر.jpg">
+      <p>
+        هنا نص الخبر، انسخي القالب ده لكل خبر جديد.
+      </p>
+    </div>
+  </section>
+</section>
+
+<section class="cards">
+  <h3>آخر الأخبار</h3>
+  <div class="cards-container">
+    <div class="card">
+      <h4>خبر حصري</h4>
+      <p>تفاصيل جديدة عن عمل فني منتظر.</p>
+    </div>
+    <div class="card">
+      <h4>تصريحات النجوم</h4>
+      <p>أبرز تصريحات الفنانين.</p>
+    </div>
+    <div class="card">
+      <h4>تريندات الفن</h4>
+      <p>أهم ما يتصدر السوشيال ميديا.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
