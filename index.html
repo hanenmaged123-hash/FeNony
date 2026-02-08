@@ -108,12 +108,11 @@
       cursor: pointer;
     }
 
-    /* ====== التعديل الوحيد هنا ====== */
     .news-card img {
       width: 100%;
-      height: 260px;
+      height: 300px;
       object-fit: cover;
-      object-position: center 30%;
+      margin-top: 30px;
     }
 
     .news-card h3 {
@@ -140,6 +139,24 @@
       display: block;
       margin: 30px auto;
       border-radius: 15px;
+    }
+
+    .social-share {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .social-share a {
+      color: #ff4da6;
+      font-size: 24px;
+      transition: 0.3s;
+    }
+
+    .social-share a:hover {
+      color: #fff;
+      transform: scale(1.2);
     }
 
     .cards {
@@ -202,7 +219,7 @@
 <section class="about">
   <h3>عن <span class="brand-name">Feنony</span></h3>
   <p>
-    Feنony موقع مخصص لاخبار الفن و الدراما و السينما و الفنانين ،
+    Feنony موقع مخصص لاخبار الفن و الدراما و السينما و الفنانين،
     هنعيش معاه كل ما يخص الفن و كواليسه لحظة بلحظة
   </p>
 </section>
@@ -229,29 +246,31 @@
     <h3>مها نصار تثير الجدل بعد هجومها على هند صبري قبل عرض مسلسل «مناعة»</h3>
 
     <div class="news-details" id="news1">
-      <!-- الخبر كامل زي ما بعتيه -->
-      ...
+
+      <p>أثارت الفنانة مهـا نصار، جدل واسع على مواقع التواصل الاجتماعي خلال الساعات الماضية، بعد أن نشرت بوست علي حسابها الخاص علي فيسبوك، و التي هاجمت فيه الفنانة هند صبري، بطلة مسلسلها الجديد "مناعة" المقرر عرضه في موسم رمضان 2026، و لكن سرعان ما تم حذفه.</p>
+
+      <p>تقوم الفنانة مها نصار، خلال أحداث المسلسل شخصية شقيقة هند صبري، حيث تلعب دورًا محوريًا ومؤثرًا في مسار القصة، وتظهر كشخصية داعمة لها في مختلف الأزمات التي تواجهها على مدار الأحداث.</p>
+
+      <img src="news2.jpg" alt="مسلسل مناعة">
+
+      <p>ومسلسل "مناعة" من بطولة الفنانة هند صبري، مها نصار، محمد أنور، خالد سليم، أحمد خالد صالح، رياض الخولي، أحمد شامي، كريم قاسم، محمد علي رزق، ميمي جمال، والعمل من تأليف عمرو الدالي وإخراج حسين المنباوي.</p>
+
+      <p>وتدور أحداث المسلسل في إطار اجتماعي تشويقي، حيث تبدأ القصة بامرأة تجد نفسها وحيدة في منتصف الثمانينيات بعد مقتل زوجها الذي كان يعمل في تجارة المخدرات، لتدخل في صراع قاسٍ من أجل حماية أبنائها الثلاثة.</p>
+
+      <p>يُذكر أن آخر أعمال الفنانة هند صبري، كانت في الجزء الثاني من مسلسل "البحث عن علا" عام 2024.</p>
+
+      <p>وآخر أعمال الفنانة مها نصار، مسلسل "ورد و شكولاتة" عام 2025.</p>
+
+      <div class="social-share">
+        <a href="https://www.facebook.com/share/1G1kVFWMzo/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/hanenmaged" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@hanenmaged05" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@hanenmaged9738" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+
     </div>
   </div>
 
-</section>
-
-<section class="cards">
-  <h3>آخر الأخبار</h3>
-  <div class="cards-container">
-    <div class="card">
-      <h4>خبر حصري</h4>
-      <p>تفاصيل جديدة عن أعمال رمضان 2026.</p>
-    </div>
-    <div class="card">
-      <h4>تصريحات النجوم</h4>
-      <p>أبرز تصريحات الفنانين خلال الساعات الماضية.</p>
-    </div>
-    <div class="card">
-      <h4>تريندات الفن</h4>
-      <p>أهم ما يتصدر السوشيال ميديا.</p>
-    </div>
-  </div>
 </section>
 
 </body>
