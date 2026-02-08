@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <title>Feنony – حنين ماجد</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Feنony موقع متخصص في أخبار الفن والدراما والسينما، مراجعات المسلسلات والأفلام، وآخر تريندات المشاهير.">
-  <meta name="keywords" content="أخبار الفن, مسلسلات, أفلام, مراجعات مسلسلات, Reviews أفلام, Feنony">
-  <meta name="author" content="حنين ماجد">
-  <meta name="robots" content="index, follow">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -49,7 +43,7 @@
       padding: 100px 20px 70px;
     }
 
-    .hero h1 { color: #ff4da6; font-size: 36px; }
+    .hero h2 { color: #ff4da6; font-size: 36px; }
 
     .hero p {
       color: #ccc;
@@ -96,7 +90,7 @@
       box-shadow: 0 0 20px rgba(255,77,166,.4);
     }
 
-    .profile-content h2 { color: #ff4da6; margin: 10px 0; }
+    .profile-content h2 { color: #ff4da6; }
     .profile-content h4 { color: #aaa; font-weight: normal; }
     .profile-content p { color: #ccc; line-height: 1.9; }
 
@@ -104,42 +98,51 @@
       color: #fff;
       margin-left: 15px;
       font-size: 22px;
-      transition: .3s;
     }
 
     .social-icons a:hover { color: #ff4da6; }
 
+    /* ===== الأخبار ===== */
     .articles {
-      padding: 70px 20px;
+      padding: 80px 20px;
       max-width: 950px;
       margin: auto;
     }
 
     .article {
       background: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 40px;
+      padding: 35px;
+      border-radius: 15px;
+      margin-bottom: 50px;
     }
 
-    .article h3 { color: #ff4da6; }
-
-    .article-content {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      align-items: center;
+    .article h3 {
+      color: #ff4da6;
+      font-size: 26px;
+      margin-bottom: 25px;
     }
 
-    .article-content img {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
-      object-fit: cover;
+    .article img.main-img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 25px;
     }
 
-    .article-content p { color: #ccc; line-height: 1.8; }
+    .article p {
+      color: #ccc;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
 
+    .article img.inner-img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 15px;
+    }
+
+    /* ===== الكروت ===== */
     .cards {
       padding: 80px 40px;
     }
@@ -163,11 +166,10 @@
     }
 
     .card h4 { color: #ff4da6; }
-    .card p { color: #ccc; line-height: 1.7; }
+    .card p { color: #ccc; }
 
     @media (max-width:768px) {
-      .profile-box { justify-content: center; text-align: center; }
-      .article-content { flex-direction: column; text-align: center; }
+      .profile-box { text-align: center; justify-content: center; }
     }
   </style>
 </head>
@@ -187,63 +189,54 @@
 </header>
 
 <section class="hero">
-  <h1>Feنony – أخبار الفن ومراجعات المسلسلات والأفلام</h1>
-  <p>
-    <span class="brand-name">Feنony</span>
-    منصة متخصصة في أخبار الفن والدراما والسينما وكواليس النجوم لحظة بلحظة.
-  </p>
+  <h2>عالم الفن بين إيديك</h2>
+  <p><span class="brand-name">Feنony</span> منصة متخصصة في أخبار الفن والدراما والسينما.</p>
 </section>
 
 <section class="about">
   <h3>عن <span class="brand-name">Feنony</span></h3>
   <p>
-    <span class="brand-name">Feنony</span> موقع مخصص لأخبار الفن والدراما والسينما والفنانين،
+    Feنony موقع مخصص لأخبار الفن والدراما والسينما والفنانين،
     بنقدّم محتوى سريع، خفيف، ومواكب لكل جديد في عالم الفن وكواليسه.
   </p>
 </section>
 
 <section class="profile-page">
   <div class="profile-box">
-    <img src="me.jpg" alt="حنين ماجد">
-
+    <img src="صورتك.jpg" alt="حنين ماجد">
     <div class="profile-content">
       <h2>حنين ماجد</h2>
       <h4>Founder <span class="brand-name">Feنony</span></h4>
-
-      <p>
-        صحفية ومراسلة ومذيعة، بخبرة أكثر من 6 سنوات في مجال الإعلام،
-        مؤسسة موقع <span class="brand-name">Feنony</span>.
-      </p>
-
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1AasCt5wXj/?mibextid=wwXIfr" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/hanenmaged?igsh=MWR6c2Y3OHJodXB4OQ%3D%3D&utm_source=qr" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://youtube.com/@hanenmaged9738?si=9xe3HkHpw3Uay8_z" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.tiktok.com/@hanenmaged05?_r=1&_t=ZS-93jc3bN44RA" target="_blank">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </div>
-
+      <p>صحفية ومراسلة ومذيعة بخبرة أكثر من 6 سنوات في مجال الإعلام.</p>
     </div>
   </div>
 </section>
 
+<!-- ===== الخبر ===== -->
 <section class="articles">
-  <section class="article">
-    <h3>عنوان الخبر</h3>
-    <div class="article-content">
-      <img src="صورة-الخبر.jpg">
-      <p>
-        هنا نص الخبر، انسخي القالب ده لكل خبر جديد.
-      </p>
-    </div>
-  </section>
+  <div class="article">
+    <h3>مها نصار تثير الجدل بعد هجومها على هند صبري قبل عرض مسلسل «مناعة»</h3>
+
+    <img src="news1.jpg" class="main-img" alt="مها نصار وهند صبري">
+
+    <p>
+      أثارت الفنانة مها نصار جدلًا واسعًا على مواقع التواصل الاجتماعي خلال الساعات الماضية،
+      بعد أن نشرت منشورًا هاجمت فيه الفنانة هند صبري بطلة مسلسلها الجديد «مناعة»،
+      قبل أن تقوم بحذفه سريعًا.
+    </p>
+
+    <p>
+      وتشارك مها نصار في المسلسل بدور شقيقة هند صبري، حيث تلعب شخصية محورية ومؤثرة
+      في مجريات الأحداث، وتظهر داعمة لها خلال الأزمات.
+    </p>
+
+    <img src="news2.jpg" class="inner-img" alt="مسلسل مناعة">
+
+    <p>
+      ويشارك في بطولة مسلسل «مناعة» نخبة من النجوم، ويُعرض ضمن موسم رمضان 2026،
+      في إطار اجتماعي تشويقي يتناول صراع امرأة داخل عالم الجريمة.
+    </p>
+  </div>
 </section>
 
 <section class="cards">
@@ -251,11 +244,11 @@
   <div class="cards-container">
     <div class="card">
       <h4>خبر حصري</h4>
-      <p>تفاصيل جديدة عن عمل فني منتظر.</p>
+      <p>تفاصيل جديدة عن أعمال رمضان 2026.</p>
     </div>
     <div class="card">
       <h4>تصريحات النجوم</h4>
-      <p>أبرز تصريحات الفنانين.</p>
+      <p>أبرز تصريحات الفنانين خلال الساعات الماضية.</p>
     </div>
     <div class="card">
       <h4>تريندات الفن</h4>
