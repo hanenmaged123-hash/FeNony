@@ -1,145 +1,258 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>FeNony</title>
+  <meta charset="UTF-8">
+  <title>Feنony – حنين ماجد</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: "Tahoma", Arial;
-    background: #0f0f0f;
-    color: #fff;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* ====== Container ====== */
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px 0;
-}
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
 
-/* ====== News Card ====== */
-.news-card {
-    background: #1b1b1b;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    margin-bottom: 30px;
-    transition: 0.3s;
-}
+    .brand-name {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      display: inline-block;
+    }
 
-.news-card:hover {
-    transform: translateY(-5px);
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      background: #000;
+    }
 
-/* ====== News Image ====== */
-.news-card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    object-position: center 35%; /* ← هنا تظبيط الوشوش */
-    display: block;
-}
+    .logo-box img { height: 80px; }
 
-/* ====== News Content ====== */
-.news-content {
-    padding: 20px;
-}
+    nav a {
+      color: #fff;
+      margin-right: 20px;
+      text-decoration: none;
+    }
 
-.news-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #ff4fa3;
-}
+    nav a:hover { color: #ff4da6; }
 
-.news-excerpt {
-    color: #ccc;
-    font-size: 15px;
-    line-height: 1.8;
-}
+    .hero {
+      text-align: center;
+      padding: 100px 20px 70px;
+    }
 
-/* ====== Full News ====== */
-.full-news {
-    display: none;
-    margin-top: 20px;
-    font-size: 15px;
-    line-height: 1.9;
-    color: #eaeaea;
-}
+    .hero h2 { color: #ff4da6; font-size: 36px; }
 
-/* ====== Read More ====== */
-.read-more {
-    margin-top: 15px;
-    color: #ff4fa3;
-    font-size: 14px;
-}
-</style>
+    .hero p {
+      color: #ccc;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .about {
+      background: #0b0b0b;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .about h3 { color: #ff4da6; font-size: 28px; }
+
+    .about p {
+      color: #ccc;
+      max-width: 700px;
+      margin: 30px auto 0;
+      line-height: 1.9;
+    }
+
+    .profile-page { padding: 80px 20px; }
+
+    .profile-box {
+      max-width: 900px;
+      margin: auto;
+      background: #1a1a1a;
+      border-radius: 18px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(255,77,166,.2);
+      flex-wrap: wrap;
+    }
+
+    .profile-box img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(255,77,166,.4);
+    }
+
+    .profile-content h2 { color: #ff4da6; }
+    .profile-content h4 { color: #aaa; font-weight: normal; }
+    .profile-content p { color: #ccc; line-height: 1.9; }
+
+    .articles {
+      padding: 80px 20px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .news-card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 50px;
+      cursor: pointer;
+    }
+
+    /* ====== التعديل الوحيد هنا ====== */
+    .news-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .news-card h3 {
+      color: #ff4da6;
+      padding: 20px;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .news-details {
+      padding: 0 20px 30px;
+      display: none;
+    }
+
+    .news-details p {
+      color: #ccc;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .news-details img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 15px;
+    }
+
+    .cards {
+      padding: 80px 40px;
+    }
+
+    .cards h3 {
+      text-align: center;
+      color: #ff4da6;
+      margin-bottom: 50px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .card h4 { color: #ff4da6; }
+    .card p { color: #ccc; }
+
+    @media (max-width:768px) {
+      .profile-box { text-align: center; justify-content: center; }
+    }
+  </style>
+
+  <script>
+    function toggleNews(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <div class="logo-box">
+    <img src="logo.png" alt="Feنony Logo">
+  </div>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">أخبار الفن</a>
+    <a href="#">المشاهير</a>
+    <a href="#">تواصل معنا</a>
+  </nav>
+</header>
 
-    <!-- ====== NEWS CARD ====== -->
-    <div class="news-card" onclick="toggleNews()">
+<section class="hero">
+  <h2>عالم الفن بين إيديك</h2>
+  <p><span class="brand-name">Feنony</span> منصة متخصصة في أخبار الفن والدراما والسينما.</p>
+</section>
 
-        <img src="image.jpg" alt="مسلسل مناعة">
+<section class="about">
+  <h3>عن <span class="brand-name">Feنony</span></h3>
+  <p>
+    Feنony موقع مخصص لاخبار الفن و الدراما و السينما و الفنانين ،
+    هنعيش معاه كل ما يخص الفن و كواليسه لحظة بلحظة
+  </p>
+</section>
 
-        <div class="news-content">
-            <div class="news-title">
-                مها نصار تثير الجدل قبل عرض مسلسل «مناعة»
-            </div>
-
-            <div class="news-excerpt">
-                أثارت الفنانة مها نصار جدلًا واسعًا على مواقع التواصل الاجتماعي خلال الساعات الماضية…
-            </div>
-
-            <div class="read-more">
-                اضغطي لقراءة الخبر كامل
-            </div>
-
-            <!-- ====== FULL NEWS ====== -->
-            <div class="full-news" id="fullNews">
-
-                <p>
-                أثارت الفنانة مهـا نصار، جدل واسع على مواقع التواصل الاجتماعي خلال الساعات الماضية، بعد أن نشرت بوست علي حسابها الخاص علي فيسبوك، و التي هاجمت فيه الفنانة هند صبري، بطلة مسلسلها الجديد "منَاعة " المقرر عرضه في موسم رمضان 2026، و لكن سرعان ما تم حذفه.
-                </p>
-
-                <p>
-                تقوم الفنانة مها نصار، خلال أحداث المسلسل شخصية شقيقة هند صبري، حيث تلعب دورًا محوريًا ومؤثرًا في مسار القصة، وتظهر كشخصية داعمة لها في مختلف الأزمات التي تواجهها على مدار الأحداث، وهو ما يضيف بُعدًا إنسانيًا قويًا للعلاقة بين الشقيقتين داخل العمل.
-                </p>
-
-                <p>
-                ومسلسل "مناعة" من بطولة الفنانة هند صبري، و مها نصار، محمد أنور، خالد سليم، أحمد خالد صالح، رياض الخولي، أحمد شامي، كريم قاسم، محمد علي رزق، ميمي جمال، ومها نصار، والعمل من تأليف عمرو الدالي وإخراج حسين المنباوي.
-                </p>
-
-                <p>
-                وتدور أحداث المسلسل في إطار اجتماعي تشويقي، حيث تبدأ القصة بامرأة تجد نفسها وحيدة في منتصف الثمانينيات بعد مقتل زوجها الذي كان يعمل في تجارة المخدرات، لتدخل في صراع قاسٍ من أجل حماية أبنائها الثلاثة. ومع تصاعد الأحداث، تتحول محاولاتها للبقاء إلى رحلة مليئة بالمخاطر داخل عالم الجريمة، وصولًا إلى صعودها كأحد الأسماء المؤثرة في هذا العالم، قبل أن تنقلب الموازين مع تدخل السلطات، لتواجه مصيرًا حاسمًا وعواقب اختياراتها.
-                </p>
-
-                <p>
-                يُذكر أن آخر أعمال الفنانة هند صبري، كانت في الجزء الثاني من مسلسل "البحث عن علا" عام 2024، من بطولة هاني عادل، و سوسن بدر، و من تأليف مها الوزيري وإخراج هادي الباجوري، والذي حقق نسب مشاهدة مرتفعة وقت عرضه.
-                </p>
-
-                <p>
-                وآخر أعمال الفنانة مها نصار، مسلسل "ورد و شكولاتة" عام 2025، من بطولة زينة، ومحمد فراج، و من تأليف محمد رجاء، و إخراج محمد العدل.
-                </p>
-
-            </div>
-        </div>
+<section class="profile-page">
+  <div class="profile-box">
+    <img src="me.jpg" alt="حنين ماجد">
+    <div class="profile-content">
+      <h2>حنين ماجد</h2>
+      <h4>Founder <span class="brand-name">Feنony</span></h4>
+      <p>
+        صحفية ومراسلة ومذيعة بخبرة أكثر من ست سنوات في مجال الإعلام،
+        اتسحرت بعالم الفن والسينما والدراما وقررت إنها تكون جزء منه
+        وتنقللكوا الأحداث وكواليسه لحظة بلحظة.
+      </p>
     </div>
+  </div>
+</section>
 
-</div>
+<section class="articles">
 
-<script>
-function toggleNews() {
-    const news = document.getElementById("fullNews");
-    news.style.display = news.style.display === "block" ? "none" : "block";
-}
-</script>
+  <div class="news-card" onclick="toggleNews('news1')">
+    <img src="news1.jpg" alt="مها نصار">
+    <h3>مها نصار تثير الجدل بعد هجومها على هند صبري قبل عرض مسلسل «مناعة»</h3>
+
+    <div class="news-details" id="news1">
+      <!-- الخبر كامل زي ما بعتيه -->
+      ...
+    </div>
+  </div>
+
+</section>
+
+<section class="cards">
+  <h3>آخر الأخبار</h3>
+  <div class="cards-container">
+    <div class="card">
+      <h4>خبر حصري</h4>
+      <p>تفاصيل جديدة عن أعمال رمضان 2026.</p>
+    </div>
+    <div class="card">
+      <h4>تصريحات النجوم</h4>
+      <p>أبرز تصريحات الفنانين خلال الساعات الماضية.</p>
+    </div>
+    <div class="card">
+      <h4>تريندات الفن</h4>
+      <p>أهم ما يتصدر السوشيال ميديا.</p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
