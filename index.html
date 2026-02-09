@@ -10,8 +10,14 @@
 body{
   margin:0;
   background:#111;
-  color:#fff;
   font-family:Arial,sans-serif;
+  color:#fff;
+}
+
+.brand-name{
+  direction:ltr;
+  unicode-bidi:bidi-override;
+  display:inline-block;
 }
 
 header{
@@ -21,7 +27,9 @@ header{
   padding:12px 40px;
   background:#000;
 }
+
 .logo-box img{height:80px;}
+
 nav a{
   color:#fff;
   margin-right:20px;
@@ -31,19 +39,30 @@ nav a:hover{color:#ff4da6;}
 
 .hero{
   text-align:center;
-  padding:90px 20px 70px;
+  padding:100px 20px 70px;
 }
 .hero h2{color:#ff4da6;font-size:36px;}
-.hero p{color:#ccc;max-width:650px;margin:auto;line-height:1.8;}
+.hero p{
+  color:#ccc;
+  max-width:650px;
+  margin:auto;
+  line-height:1.8;
+}
 
 .about{
   background:#0b0b0b;
   padding:70px 20px;
   text-align:center;
 }
-.about h3{color:#ff4da6;}
-.about p{color:#ccc;max-width:700px;margin:auto;line-height:1.9;}
+.about h3{color:#ff4da6;font-size:28px;}
+.about p{
+  color:#ccc;
+  max-width:700px;
+  margin:30px auto 0;
+  line-height:1.9;
+}
 
+/* ===== مقال حنين ===== */
 .profile-page{padding:80px 20px;}
 .profile-box{
   max-width:900px;
@@ -54,6 +73,7 @@ nav a:hover{color:#ff4da6;}
   display:flex;
   gap:40px;
   align-items:center;
+  box-shadow:0 0 30px rgba(255,77,166,.2);
   flex-wrap:wrap;
 }
 .profile-box img{
@@ -62,23 +82,18 @@ nav a:hover{color:#ff4da6;}
   border-radius:50%;
   object-fit:cover;
 }
-.profile-content h2{color:#ff4da6;margin-bottom:5px;}
-.profile-content span{
-  color:#ff9acb;
-  font-size:14px;
-}
-.profile-content p{color:#ccc;line-height:1.9;margin-top:15px;}
+.profile-content h2{color:#ff4da6;}
+.profile-content h4{color:#aaa;font-weight:normal;}
+.profile-content p{color:#ccc;line-height:1.9;}
 
-.social-icons{
-  margin-top:25px;
-}
 .social-icons a{
-  color:#ff4da6;
+  color:#fff;
   font-size:22px;
   margin-left:15px;
 }
-.social-icons a:hover{color:#fff;}
+.social-icons a:hover{color:#ff4da6;}
 
+/* ===== الأخبار ===== */
 .articles{
   padding:80px 20px;
   max-width:950px;
@@ -87,55 +102,84 @@ nav a:hover{color:#ff4da6;}
 
 .news-card{
   background:#1a1a1a;
-  border-radius:18px;
+  border-radius:15px;
   overflow:hidden;
+  margin-bottom:50px;
   cursor:pointer;
 }
 
-.news-card img.main-img{
+.news-card img{
   width:100%;
-  height:360px;
+  height:320px;
   object-fit:cover;
-  object-position:center 25%;
+  object-position:center 20%;
 }
 
 .news-card h3{
   color:#ff4da6;
-  padding:25px;
+  padding:20px;
+  margin:0;
   font-size:24px;
 }
 
 .news-details{
   display:none;
-  padding:0 25px 40px;
+  padding:0 20px 30px;
 }
-
 .news-details p{
   color:#ccc;
-  line-height:2;
+  line-height:1.9;
   margin-bottom:20px;
 }
-
 .news-details img{
   width:100%;
-  max-width:550px;
+  max-width:500px;
   display:block;
-  margin:35px auto;
+  margin:30px auto;
   border-radius:15px;
-  object-fit:cover;
-  object-position:center 30%;
 }
 
+/* ===== كروت ===== */
+.cards{
+  padding:80px 40px;
+}
+.cards h3{
+  text-align:center;
+  color:#ff4da6;
+  margin-bottom:50px;
+}
+.cards-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:#1a1a1a;
+  padding:25px;
+  border-radius:12px;
+}
+.card h4{color:#ff4da6;}
+.card p{color:#ccc;}
+
 @media(max-width:768px){
-  .profile-box{text-align:center;}
+  .profile-box{text-align:center;justify-content:center;}
 }
 </style>
+
+<script>
+function toggleNews(id){
+  const el=document.getElementById(id);
+  el.style.display=el.style.display==="block"?"none":"block";
+}
+</script>
 </head>
 
 <body>
 
 <header>
-  <div class="logo-box"><img src="logo.png"></div>
+  <div class="logo-box">
+    <img src="logo.png" alt="Feنony">
+  </div>
   <nav>
     <a href="#">الرئيسية</a>
     <a href="#">أخبار الفن</a>
@@ -146,11 +190,11 @@ nav a:hover{color:#ff4da6;}
 
 <section class="hero">
   <h2>عالم الفن بين إيديك</h2>
-  <p>Feنony منصة متخصصة في أخبار الفن والدراما والسينما</p>
+  <p><span class="brand-name">Feنony</span> منصة متخصصة في أخبار الفن والدراما والسينما</p>
 </section>
 
 <section class="about">
-  <h3>عن Feنony</h3>
+  <h3>عن <span class="brand-name">Feنony</span></h3>
   <p>
     Feنony موقع مخصص لاخبار الفن و الدراما و السينما و الفنانين،
     هنعيش معاه كل ما يخص الفن و كواليسه لحظة بلحظة
@@ -159,11 +203,10 @@ nav a:hover{color:#ff4da6;}
 
 <section class="profile-page">
   <div class="profile-box">
-    <img src="me.jpg">
+    <img src="صورتك.jpg" alt="حنين ماجد">
     <div class="profile-content">
       <h2>حنين ماجد</h2>
-      <span>Founder of Feنony</span>
-
+      <h4>Founder of <span class="brand-name">Feنony</span></h4>
       <p>
         صحفية ومراسلة ومذيعة بخبرة أكثر من ست سنوات في مجال الإعلام،
         اتسحرت بعالم الفن والسينما والدراما وقررت إنها تكون جزء منه
@@ -173,7 +216,7 @@ nav a:hover{color:#ff4da6;}
       <div class="social-icons">
         <a href="https://www.instagram.com/hanenmaged" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@hanenmaged05" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/share/1G1kVFWMzo/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/share/1G1kVFWMzo/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://youtube.com/@hanenmaged9738" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
@@ -182,47 +225,30 @@ nav a:hover{color:#ff4da6;}
 
 <section class="articles">
 
-  <div class="news-card" onclick="toggleNews(this)">
-    <img src="news1.jpg" class="main-img">
-    <h3>مها نصار تثير الجدل بعد هجومها على هند صبري قبل عرض مسلسل «مناعة»</h3>
+<div class="news-card" onclick="toggleNews('news1')">
+  <img src="news1.jpg" alt="مها نصار">
+  <h3>مها نصار تثير الجدل بعد هجومها على هند صبري قبل عرض مسلسل «مناعة»</h3>
 
-    <div class="news-details">
-      <p>
-أثارت الفنانة مهـا نصار، جدل واسع على مواقع التواصل الاجتماعي خلال الساعات الماضية، بعد أن نشرت بوست علي حسابها الخاص علي فيسبوك، و التي هاجمت فيه الفنانة هند صبري، بطلة مسلسلها الجديد "منَاعة " المقرر عرضه في موسم رمضان 2026، و لكن سرعان ما تم حذفه.
-      </p>
+  <div class="news-details" id="news1">
 
-      <p>
-تقوم الفنانة مها نصار، خلال أحداث المسلسل شخصية شقيقة هند صبري، حيث تلعب دورًا محوريًا ومؤثرًا في مسار القصة، وتظهر كشخصية داعمة لها في مختلف الأزمات التي تواجهها على مدار الأحداث.
-      </p>
+<p>أثارت الفنانة مهـا نصار، جدل واسع على مواقع التواصل الاجتماعي خلال الساعات الماضية، بعد أن نشرت بوست علي حسابها الخاص علي فيسبوك، و التي هاجمت فيه الفنانة هند صبري، بطلة مسلسلها الجديد "منَاعة " المقرر عرضه في موسم رمضان 2026، و لكن سرعان ما تم حذفه.</p>
 
-      <img src="news2.jpg">
+<p>تقوم الفنانة مها نصار، خلال أحداث المسلسل شخصية شقيقة هند صبري، حيث تلعب دورًا محوريًا ومؤثرًا في مسار القصة، وتظهر كشخصية داعمة لها في مختلف الأزمات التي تواجهها على مدار الأحداث، وهو ما يضيف بُعدًا إنسانيًا قويًا للعلاقة بين الشقيقتين داخل العمل.</p>
 
-      <p>
-ومسلسل "مناعة" من بطولة الفنانة هند صبري، و مها نصار، محمد أنور، خالد سليم، أحمد خالد صالح، رياض الخولي، أحمد شامي، كريم قاسم، محمد علي رزق، ميمي جمال، والعمل من تأليف عمرو الدالي وإخراج حسين المنباوي.
-      </p>
+<img src="news2.jpg" alt="مسلسل مناعة">
 
-      <p>
-وتدور أحداث المسلسل في إطار اجتماعي تشويقي، حيث تبدأ القصة بامرأة تجد نفسها وحيدة في منتصف الثمانينيات بعد مقتل زوجها الذي كان يعمل في تجارة المخدرات...
-      </p>
+<p>ومسلسل "مناعة" من بطولة الفنانة هند صبري، و مها نصار، محمد أنور، خالد سليم، أحمد خالد صالح، رياض الخولي، أحمد شامي، كريم قاسم، محمد علي رزق، ميمي جمال، ومها نصار، والعمل من تأليف عمرو الدالي وإخراج حسين المنباوي.</p>
 
-      <p>
-يُذكر أن آخر أعمال الفنانة هند صبري، كانت في الجزء الثاني من مسلسل "البحث عن علا" عام 2024.
-      </p>
+<p>وتدور أحداث المسلسل في إطار اجتماعي تشويقي، حيث تبدأ القصة بامرأة تجد نفسها وحيدة في منتصف الثمانينيات بعد مقتل زوجها الذي كان يعمل في تجارة المخدرات، لتدخل في صراع قاسٍ من أجل حماية أبنائها الثلاثة. ومع تصاعد الأحداث، تتحول محاولاتها للبقاء إلى رحلة مليئة بالمخاطر داخل عالم الجريمة، وصولًا إلى صعودها كأحد الأسماء المؤثرة في هذا العالم، قبل أن تنقلب الموازين مع تدخل السلطات، لتواجه مصيرًا حاسمًا وعواقب اختياراتها.</p>
 
-      <p>
-وآخر أعمال الفنانة مها نصار، مسلسل "ورد و شكولاتة" عام 2025.
-      </p>
-    </div>
+<p>يُذكر أن آخر أعمال الفنانة هند صبري، كانت في الجزء الثاني من مسلسل "البحث عن علا" عام 2024، من بطولة هاني عادل، و سوسن بدر، و من تأليف مها الوزيري وإخراج هادي الباجوري، والذي حقق نسب مشاهدة مرتفعة وقت عرضه.</p>
+
+<p>وآخر أعمال الفنانة مها نصار، مسلسل "ورد و شكولاتة" عام 2025، من بطولة زينة، ومحمد فراج، و من تأليف محمد رجاء، و إخراج محمد العدل.</p>
+
   </div>
+</div>
 
 </section>
-
-<script>
-function toggleNews(card){
-  const details = card.querySelector(".news-details");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
